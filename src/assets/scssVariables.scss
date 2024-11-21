@@ -1,0 +1,22 @@
+$primary-color: #fb8500;
+$secondary-color: darken($primary-color, 10%);
+
+$font-grey: #37423b;
+$white: #fff;
+$black: #000;
+$matte-black: #28282B;
+$grey: #eef0ef;
+$grey-2: #f9faf9;
+$light-blue: #e7f3fe;
+
+
+// mixin
+$transition-time: 0.2s;
+
+@mixin transition-in {
+    transition: $transition-time ease-in;
+}
+
+@mixin transition-out {
+    transition: $transition-time ease-out;
+}

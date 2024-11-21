@@ -1,0 +1,50 @@
+@import "./assets/scssVariables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+    color: white;
+    font-family: "Poppins-Regular";
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    background-color: $primary-color;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: $white;
+    font-weight: 500;
+    color: $black;
+
+    @include transition-in;
+}
+
+.btn:hover {
+    background-color: $secondary-color;
+
+    @include transition-out;
+}
+
+.btn-light {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        padding: .7rem .7rem 0 0.7rem;
+    }
+}
