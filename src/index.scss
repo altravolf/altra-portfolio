@@ -9,8 +9,8 @@
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
     font-family: "Poppins-Regular";
     padding: 1.5rem 1.5rem 0 1.5rem;
 }
