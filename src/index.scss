@@ -1,4 +1,4 @@
-@import "./assets/scssVariables.scss";
+@use "./assets/scssVariables.scss" as var;
 
 * {
     margin: 0;
@@ -9,34 +9,34 @@
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: $black;
-    color: $white;
+    background-color: var.$black;
+    color: var.$white;
     font-family: "Poppins-Regular";
     padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
 a {
-    color: $white;
+    color: var.$white;
     text-decoration: none;
 }
 
 .btn {
     cursor: pointer;
     border: none;
-    background-color: $primary-color;
+    background-color: var.$primary-color;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    color: $white;
+    color: var.$white;
     font-weight: 500;
-    color: $black;
+    color: var.$black;
 
-    @include transition-in;
+    @include var.transition-in;
 }
 
 .btn:hover {
-    background-color: $secondary-color;
+    background-color: var.$secondary-color;
 
-    @include transition-out;
+    @include var.transition-out;
 }
 
 .btn-light {
