@@ -1,4 +1,4 @@
-@import "../../assets/scssVariables.scss";
+@use "../../assets/scssVariables.scss" as var;
 
 .Navbar {
     display: flex;
@@ -8,7 +8,7 @@
     .logo {
         a {
             font-size: 2rem;
-            color: $primary-color;
+            color: var.$primary-color;
         }
     }
 
@@ -48,16 +48,16 @@
         left: -100%;
         gap: 1.5rem;
         z-index: -1;
-        @include transition-out;
+        @include var.transition-out;
 
         &.active {
             left: 0;
-            @include transition-in;
+            @include var.transition-in;
         }
 
         li {
             background: rgba(58, 58, 58, 0.274);
-            border: 1px solid $white;
+            border: 1px solid var.$white;
             border-radius: 0.4rem;
             width: 80%;
             text-align: center;
