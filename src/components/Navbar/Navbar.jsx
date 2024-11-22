@@ -22,13 +22,13 @@ function Navbar() {
                 <li onClick={onClickToggle}>
                     <Link to={"/"}>Home</Link>
                 </li>
-                <li>
+                <li onClick={onClickToggle}>
                     <Link to={"/projects"}>Projects</Link>
                 </li>
-                <li>
+                <li onClick={onClickToggle}>
                     <Link to={"/about"}>About</Link>
                 </li>
-                <li>
+                <li onClick={onClickToggle}>
                     <Link to={"/contact"}>Contact</Link>
                 </li>
             </ul>
