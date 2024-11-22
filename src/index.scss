@@ -12,7 +12,12 @@ body {
     background-color: var.$black;
     color: var.$white;
     font-family: "Poppins-Regular";
-    padding: 1.5rem 1.5rem 0 1.5rem;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.container {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 a {
@@ -22,29 +27,38 @@ a {
 
 .btn {
     cursor: pointer;
-    border: none;
+    border: 1px solid var.$primary-color;
     background-color: var.$primary-color;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    padding: 0.5rem 1.3rem;
+    border-radius: 0rem;
     color: var.$white;
     font-weight: 500;
     color: var.$black;
+    display: inline-block;
+    margin: 0.5rem 0.7rem;
+    font-size: 1.2rem;
 
     @include var.transition-in;
 }
 
 .btn:hover {
     background-color: var.$secondary-color;
-
+    border-color: var.$secondary-color;
     @include var.transition-out;
 }
 
 .btn-light {
     background-color: transparent;
+    color: var.$white;
+    border-color: var.$white;
 }
 
+
+
+//*** Media Query ***
+
 @media screen and (max-width: 576px) {
-    body {
-        padding: .7rem .7rem 0 0.7rem;
+    .container {
+        padding: .7rem .7rem 0.7rem 0.7rem;
     }
 }

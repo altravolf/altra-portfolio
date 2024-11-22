@@ -13,7 +13,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="Navbar">
+        <nav className="Navbar container">
             <h1 className="logo Outfit-Bold">
                 <Link to="/">Altra Web</Link>
             </h1>
