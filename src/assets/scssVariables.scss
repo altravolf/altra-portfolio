@@ -13,6 +13,10 @@ $light-blue: #e7f3fe;
 // mixin
 $transition-time: 0.3s;
 
+@mixin transition {
+    transition: $transition-time ease;
+}
+
 @mixin transition-in {
     transition: $transition-time ease-in;
 }

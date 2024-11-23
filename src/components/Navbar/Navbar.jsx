@@ -8,12 +8,24 @@ function Navbar() {
 
     const [isToggle, setIsToggle] = useState(false);
 
+    const [scroll, setScroll] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY >= 100) {
+            setScroll(true);
+        } else {
+            setScroll(false);
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
     const onClickToggle = () => {
         setIsToggle(!isToggle);
     }
 
     return (
-        <nav className="Navbar container">
+        <nav className={`Navbar container ${scroll ? "scroll-bg" : null}`} >
             <h1 className="logo Outfit-Bold">
                 <Link to="/">Altra Web</Link>
             </h1>

@@ -4,6 +4,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    border-bottom: 1px solid #53535379;
+    @include var.transition;
+
+    &.scroll-bg {
+        // background is needed for glass like effect.
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        opacity: 0.99;
+        color: white;
+        // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
     .logo {
         a {
@@ -60,7 +75,7 @@
         }
 
         li {
-            background: #0000009d;
+            background: #000000ad;
             border: 1px solid var.$white;
             border-radius: 0.4rem;
             width: 80%;
