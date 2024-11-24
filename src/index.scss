@@ -23,6 +23,12 @@ body {
 a {
     color: var.$white;
     text-decoration: none;
+    @include var.transition-out;
+
+    &:hover {
+        color: var.$primary-color;
+        @include var.transition-in;
+    }
 }
 
 .btn {
@@ -45,6 +51,7 @@ a {
     background-color: var.$secondary-color;
     border-color: var.$secondary-color;
     @include var.transition-out;
+    color: var.$white;
 }
 
 .btn-light {
