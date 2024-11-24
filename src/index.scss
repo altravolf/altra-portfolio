@@ -20,6 +20,10 @@ body {
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
+.capitalize {
+    text-transform: initial !important;
+}
+
 a {
     color: var.$white;
     text-decoration: none;

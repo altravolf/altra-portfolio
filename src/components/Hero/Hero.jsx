@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import Hero1 from "../../assets/images/hero1.jpg";
 import Hero2 from "../../assets/images/hero2.jpg";
-import Hero3 from "../../assets/images/hero3.jpg";
 
-function Hero() {
+// eslint-disable-next-line react/prop-types
+function Hero({ heading, para, img }) {
 
     const currPath = window.location.pathname;
 
@@ -19,15 +19,9 @@ function Hero() {
                         <img className="hero1" src={Hero1} alt="Hero Image" />
                         <img className="hero2" src={Hero2} alt="Hero Image" />
                     </>)
-                    : null
-                }
-
-                {
-                    currPath === "/projects" ?
-                        (<>
-                            <img src={Hero3} alt="Hero Image" />
-                        </>)
-                        : null
+                    : (<>
+                        <img src={img} alt="Hero Image" />
+                    </>)
                 }
             </div>
             <div className="content">
@@ -38,16 +32,12 @@ function Hero() {
 
                         <Link to="/projects" className="btn">Projects</Link>
                         <Link to="/contact" className="btn btn-light">Contact</Link>
-                    </>) : null}
+                    </>) :
+                    (<>
+                        <h1 className="Outfit-Bold"> {heading}</h1>
+                        <p className="capitalize">{para}</p>
+                    </>)}
 
-                {
-                    currPath === "/projects" ?
-                        (<>
-                            <h1 className="Outfit-Bold"> Projects</h1>
-                            <p className="">Some of my recent works!</p>
-                        </>)
-                        : null
-                }
             </div>
         </div>
     );

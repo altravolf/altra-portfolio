@@ -1,10 +1,10 @@
-import HeightFix from "../components/HeightFix/HeightFix";
+import Hero from "../components/Hero/Hero";
+import HeroContact from "../assets/images/hero5.jpg";
 
 function Contact() {
     return (
         <div className="Contact">
-            <HeightFix />
-            Your Contact page is here
+            <Hero heading={"Contact Us"} para={"Let's have a chat!"} img={HeroContact} />
         </div>
     );
 }
