@@ -1,10 +1,9 @@
-import HeightFix from "../components/HeightFix/HeightFix";
+import Hero from "../components/Hero/Hero";
 
 function Projects() {
     return (
         <div className="Projects">
-            <HeightFix />
-            Your Projects page is here
+            <Hero />
         </div>
     );
 }
