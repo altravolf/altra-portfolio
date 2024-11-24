@@ -2,13 +2,23 @@ import './Navbar.scss';
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
-import { useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import MyContext from "../../data/MyContext";
 
 function Navbar() {
 
     const [isToggle, setIsToggle] = useState(false);
-
     const [scroll, setScroll] = useState(false);
+
+    const heightRef = useRef(null);
+    const { setIsHeight } = useContext(MyContext);
+
+    useEffect(() => {
+        if (heightRef?.current) {
+            const height = heightRef.current.offsetHeight;
+            setIsHeight(height)
+        }
+    })
 
     const handleScroll = () => {
         if (window.scrollY >= 100) {
@@ -25,7 +35,8 @@ function Navbar() {
     }
 
     return (
-        <nav className={`Navbar container ${scroll ? "scroll-bg" : null}`} >
+        <nav className={`Navbar container ${scroll ? "scroll-bg" : null}`}
+            ref={heightRef} >
             <h1 className="logo Outfit-Bold">
                 <Link to="/">Altra Web</Link>
             </h1>
