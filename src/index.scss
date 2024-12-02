@@ -24,6 +24,10 @@ body {
     text-transform: initial !important;
 }
 
+.uppercase {
+    text-transform: uppercase !important;
+}
+
 a {
     color: var.$white;
     text-decoration: none;

@@ -1,0 +1,36 @@
+@use "../../assets/scssVariables.scss" as var;
+
+.PriceCard {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    border: 1px solid var.$primary-color;
+    flex: 1;
+    border-radius: 0.2rem;
+    @include var.transition;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 4px 11px 3px rgba(255, 255, 255, 0.1);
+        @include var.transition;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        padding: 0.7rem 0;
+    }
+
+    .price {
+        font-size: 2.3rem;
+    }
+
+    .btn-cust {
+        font-size: 1rem;
+    }
+
+}
